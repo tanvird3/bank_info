@@ -65,5 +65,5 @@ def financial_indicator(selected_value):
     
 # launch the app
 if __name__ == "__main__":
-    app.run_server(port=4050)
+    app.run_server(debug=True, threaded=True)
 
