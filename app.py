@@ -30,6 +30,7 @@ col_ind=col_ind.tolist()[0:len(variable)]
 
 # initiate the app
 app = dash.Dash()
+server = app.server
 
 # set the layout
 app.layout = html.Div(
