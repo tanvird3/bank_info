@@ -142,7 +142,6 @@ pycurl==7.43.0.3
 pyflakes==2.1.1
 Pygments==2.4.2
 pylint==2.3.1
-pyodbc==4.0.26
 pyOpenSSL==19.0.0
 pyparsing==2.4.0
 PyPDF2==1.26.0
@@ -196,9 +195,6 @@ sympy==1.4
 tables==3.5.2
 tabula-py==1.4.1
 tblib==1.4.0
-tensorboard==1.14.0
-tensorflow==1.14.0
-tensorflow-estimator==1.14.0
 termcolor==1.1.0
 terminado==0.8.2
 testpath==0.4.2
