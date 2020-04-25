@@ -8,7 +8,7 @@ from dash.dependencies import Input, Output
 import plotly.graph_objs as go
 
 # read the data, set the index
-bank = pd.read_excel("F:/GoogleDrive/python/bank.xlsx", index_col=0)
+bank = pd.read_excel("bank.xlsx", index_col=0)
 bank = bank.sort_index(axis=1)
 # bank.head(2)
 
@@ -22,7 +22,7 @@ variable = bank.index.tolist()
 
 # get the color list
 col_ind=np.array(["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728",  "#9467bd",  "#8c564b",  "#e377c2",  "#7f7f7f",  "#bcbd22",  "#17becf" ])
-col_ind=np.array(["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728",  "#9467bd",  "#8c564b",  "#e377c2",  "#7f7f7f",  "#bcbd22",  "#17becf" ])
+#col_ind=np.array(["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728",  "#9467bd",  "#8c564b",  "#e377c2",  "#7f7f7f",  "#bcbd22",  "#17becf" ])
 col_ind=np.tile(col_ind, 3)
 col_ind=col_ind.tolist()[0:len(variable)]
 #len(col_ind)
