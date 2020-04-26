@@ -35,7 +35,7 @@ server = app.server
 # set the layout
 app.layout = html.Div(
     [
-        html.H1(children="Banking Sector Information", style={"textAlign": "center"}),
+        html.H1(children="Banks of Bangladesh", style={"textAlign": "center"}),
         html.H3(children="As on 31-12-2019", style={"textAlign": "center"}),
         #html.Div(children="As on 31-12-2019", style={"textAlign": "center", 'fontsize':'50px'}),
         #html.Label("Choose a Variable"),
