@@ -21,10 +21,10 @@ variable = bank.index.tolist()
 #len(variable)
 
 # get the color list
-col_ind=np.array(["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728",  "#9467bd",  "#8c564b",  "#e377c2",  "#7f7f7f",  "#bcbd22",  "#17becf" ])
-#col_ind=np.array(["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728",  "#9467bd",  "#8c564b",  "#e377c2",  "#7f7f7f",  "#bcbd22",  "#17becf" ])
-col_ind=np.tile(col_ind, np.int(np.ceil(len(variable)/len(col_ind))))
-col_ind=col_ind.tolist()[0:len(variable)]
+col_ind = np.array(["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728",  "#9467bd",  "#8c564b",  "#e377c2",  "#7f7f7f",  "#bcbd22",  "#17becf" ])
+#col_ind = np.array(["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728",  "#9467bd",  "#8c564b",  "#e377c2",  "#7f7f7f",  "#bcbd22",  "#17becf" ])
+col_ind = np.tile(col_ind, np.int(np.ceil(len(variable)/len(col_ind))))
+col_ind = col_ind.tolist()[0:len(variable)]
 #len(col_ind)
 #len(col_ind)
 
@@ -35,19 +35,19 @@ server = app.server
 # set the layout
 app.layout = html.Div(
     [
-        html.H1(children="Banks of Bangladesh", style={"textAlign": "center"}),
-        html.H3(children="As on 31-12-2019", style={"textAlign": "center"}),
-        #html.Div(children="As on 31-12-2019", style={"textAlign": "center", 'fontsize':'50px'}),
+        html.H1(children = "Banks of Bangladesh", style = {"textAlign": "center"}),
+        html.H3(children = "As on 31-12-2019", style = {"textAlign": "center"}),
+        #html.Div(children = "As on 31-12-2019", style = {"textAlign": "center", 'fontsize':'50px'}),
         #html.Label("Choose a Variable"),
         dcc.Dropdown(
-            id="Select Variable", 
+            id = "Select Variable", 
             options=[
         {'label': i, 'value': i} for i in variable
     ], value= variable[0], clearable=False,
-        style={"display": "block",'fontSize' : '20px', "margin-left": "auto",
+        style = {"display": "block",'fontSize' : '20px', "margin-left": "auto",
                                         "margin-right": "auto", "width": "60%"}),
         dcc.Graph(
-            id="FinIndic"
+            id = "FinIndic"
         )
     ]
 )
@@ -58,9 +58,9 @@ app.layout = html.Div(
 # set the function for plot
 def financial_indicator(selected_value):
     Y = bank.loc[bank.index==selected_value]
-    Y=Y.values.tolist()[0]
-    ind=variable.index(selected_value)
-    trace=go.Bar(x=bank_names, y=Y, marker={'color':col_ind[ind]})
+    Y = Y.values.tolist()[0]
+    ind = variable.index(selected_value)
+    trace = go.Bar(x = bank_names, y = Y, marker = {'color':col_ind[ind]})
     return {
         'data': [trace]}
     
